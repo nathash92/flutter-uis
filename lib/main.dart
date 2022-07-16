@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:uis/screens/home.dart';
 import 'package:uis/screens/splashscreens/splash_screen_one.dart';
 import 'package:uis/screens/walkthrough_one.dart';
+import 'package:uis/travel/travel_main.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,9 +22,11 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/splash-one',
       routes: {
-        '/': (context) => SplashScreenOne(),
-        '/splash-one': (context) => SplashScreenOne(),
-        '/walkthrough-one': (context) => WalkThroughOne()
+        '/': (context) => const SplashScreenOne(),
+        '/splash-one': (context) => const SplashScreenOne(),
+        '/walkthrough-one': (context) => const WalkThroughOne(),
+        '/home': (context) => const HomeScreen(),
+        '/travel/main': (context) => const TravelMainScreen(),
       },
     );
   }
